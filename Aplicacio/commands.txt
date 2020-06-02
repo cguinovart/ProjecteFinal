@@ -1,0 +1,38 @@
+
+//Mostrar tots els contenidors Docker
+    ~ docker ps -a | head
+
+// fer commit dels canvis que has fet del docker.
+    ~ docker commit + "id de contenidor" 
+
+// veure imatges locals de docker 
+    ~ docker image ls | head
+
+// afegir tags en la nostre imatge
+    ~ docker image tag + "id de la imatge" + "nom del tag"
+
+//crear un volum per penjar els fitxers al docker
+    ~ docker run -v "lloc del directori local":"ubicacio del fitxer dins del docker"
+
+// exposar port del contenidor
+    ~ docker run -v "lloc del directori local":"ubicacio del fitxer dins del docker":ro -p "port maquina local":"port docker"
+
+
+//creació i execució d'image des de docker-compose
+	~ docker-compose up -d
+
+//creació de la image a partir de Dockerfile
+	~ docker build .
+
+//Obtenció de información del worker de kubernetes
+	~ kubectl node info
+
+//aplicar configuració kubernetes
+	~ kubectl apply -f +"nom del fitxer"
+
+//Pont de connexió cap al servei de kubernetes creat
+	~ minikube service +"nom del servei"
+
+//visualització de tos les componente que s'han creat en Kubernetes.
+	~ ubectl get all
+
